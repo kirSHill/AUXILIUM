@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo Charge</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://kit.fontawesome.com/dffa610f15.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--Header Section--> 
+    <header class="header">
+        <div class="wrapper">
+            <div class="header_wrapper">
+                <div class="header_logo">
+                    <a href="/" class="header_logo_link">
+                        <img src="/img/svg/AUXILIUM_logo.svg" alt="auxilium" class="header_logo_picture">
+                    </a>
+                </div>
+                <input type="checkbox" name="menu" id="menu">
+                <label for="menu"><i class="fa-solid fa-bars"></i></label>
+                <nav class="header_nav">
+                    <a href="#exos" class="js-scroll">Экзоскелеты</a>    
+                    <a href="#projects" class="js-scroll">Разработки</a>
+                    <a href="#team" class="js-scroll">Команда</a>
+                    <a href="#contacts" class="js-scroll">Контакты</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!--Header Section-->
+    <!--Intro Section-->
+    <main class="main">
+        <section class="intro">
+            <div class="intro_wrapper">
+                <div class="intro_content">
+                    <h1 class="intro_title">
+                        <p>EXO <br>CHARGE</p>
+                    </h1>
+                    <p class="intro_subtitle">
+                        Прорыв на рынке <br>умной одежды
+                    </p>
+                    <a href="https://t.me/jls_manager">
+                        <button type="button" class="intro_buy">
+                            Заказать
+                        </button>
+                    </a>
+                </div>
+                <div class="intro_picture">
+                    <img src="/img/png/intro_img.png" alt="exoskeleton" class="intro_img">
+                </div>
+            </div>
+        </section>
+        <!--Intro Section-->
+        <!--Exoskeletons Section-->
+       <section class="exos" id="exos">
+            <div class="exos_wrapper">
+                <h2 class="exos_title">
+                    Экзоскелеты
+                </h2>
+                <div class="gallery">
+                    <!-- Свайпер -->
+                    <div class="swiper gallery-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a data-fslightbox="gallery" class="gallery__link" href="/img/png/model_sl_big.png">
+                                    <img class="gallery__img" src="/img/png/model_sl_img.png" alt="1">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a data-fslightbox="gallery" class="gallery__link" href="/img/png/model_b_big.png">
+                                    <img class="gallery__img" src="/img/png/model_b_img.png" alt="2">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a data-fslightbox="gallery" class="gallery__link" href="/img/png/model_a_big.png">
+                                    <img class="gallery__img" src="/img/png/model_a_img.png" alt="3">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a data-fslightbox="gallery" class="gallery__link" href="/img/png/model_g_big.png">
+                                    <img class="gallery__img" src="/img/png/model_g_img.png" alt="4">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a data-fslightbox="gallery" class="gallery__link" href="/img/png/model_t_big.png">
+                                    <img class="gallery__img" src="/img/png/model_t_img.png" alt="5">
+                                </a>
+                            </div>
+        
+                        </div>
+                    </div>
+        
+                    <!-- Навигация -->
+                    <div class="gallery__navigation">
+                        <button class="gallery__btn gallery__btn-prev">
+                            <svg width="20" height="20" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 11L0.999995 6L6 0.999998" stroke="#4971AF" />
+                            </svg>
+                        </button>
+                        <button class="gallery__btn gallery__btn-next">
+                            <svg width="20" height="20" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 11L6.00001 6L1 0.999997" stroke="#4971AF" />
+                            </svg>
+                        </button>
+                    </div>
+        
+                </div>
+        
+                <div class="gallery-pagination"></div>
+            </div>
+        </section>
+        <!--Exoskeletons Section-->
+        <!--Projects Section-->
+        <section class="projects" id="projects">
+            <div class="projects_wrapper">
+                <h2 class="projects_title">
+                    Разработки    
+                </h2>
+                <div class="projects_pictures">
+                        <div><img src="/img/png/bobr.png" alt="Bobr" class="projects_img"></div>
+                        <div><img src="/img/png/bobryonok.png" alt="Bobryonok" class="projects_img"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Projects Section-->
+        <!--Video Section-->
+        <section class="video">
+            <div class="video_wrapper">
+                <h2 class="video_title">
+                    Как это работает?
+                </h2>
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ly36kn0ug4k?si=55iF0vLG3P34Lb92" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+        <!--Video Section-->
+        <!--Team Section-->
+        <section class="team" id="team">
+            <div class="team_wrapper">
+                <div class="team_members">
+                    <div class="card1">
+                        <div class="name">
+                            Смирнов Иван                            
+                        </div>
+                        <div class="desc">
+                            Проектировщик, Сборщик, PR
+                        </div>
+                    </div>
+                    <div class="card2">
+                        <div class="name">
+                            Петриков Фёдор                           
+                        </div>
+                        <div class="desc">
+                            Сборщик, Схемотехник
+                        </div>
+                    </div>
+                    <div class="card3">
+                        <div class="name">
+                            Ледюков Алексей                           
+                        </div>
+                        <div class="desc">
+                            Проектировщик, Сборщик
+                        </div>
+                    </div>
+                    <div class="card4">
+                        <div class="name">
+                            Нагорный Леонид                            
+                        </div>
+                        <div class="desc">
+                            Генеральный директор, Проектировщик
+                        </div>
+                    </div>
+                    <div class="card5">
+                        <div class="name">
+                            Нуждин Константин                            
+                        </div>
+                        <div class="desc">
+                            Сборщик, Проектировщик
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Team Section-->
+        <!-- Bottom Section -->
+        <section class="bottom" id="contacts">
+            <div class="bottom_wrapper">
+                <h2 class="bottom_title">
+                    Контакты
+                </h2>
+                <div class="phone_number">+7 (928) 908 - 31 - 33</div>
+                <div class="mail">mail@auxilium.ru</div>
+                <div class="address">Кронверкский пр., д. 49</div>
+                <div class="medias">
+                    <a href="https://youtube.com/@IVANSMIT?si=DJGdY_6UMfcSxzLT"><img src="/img/svg/youtube.svg" alt="YouTube" class="bottom_svg"></a>
+                    <a href="https://vk.com/auxiliumexo"><img src="/img/svg/vk.svg" alt="VK" class="bottom_svg"></a>
+                    <a href="https://t.me/ivansmittt"><img src="/img/svg/telegram.svg" alt="Telegram" class="bottom_svg"></a>
+                    <a href="https://dzen.ru/ivansmit"><img src="/img/svg/dzen.svg" alt="Dzen" class="bottom_svg"></a>
+                </div>
+            </div>
+        </section>
+        <!-- Bottom Section -->
+    </main>
+    <script src="js/fslightbox.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
