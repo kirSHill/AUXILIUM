@@ -1,0 +1,753 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+@font-face {
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: bold;
+    src: local('Helvetica Bold'), 
+    url('../font/Helvetica-Bold.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Helvetica Regular'), 
+    url('../font/Helvetica.ttf') format('ttf');
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*,*::before,*::after {
+    box-sizing: inherit;
+}   
+
+body {
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #FFFFFF;
+    background: radial-gradient(rgba(22,40,66,1) 10%, rgba(61,118,161,1));
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+section {
+    min-height: 100vh;
+    padding: 0 9%;
+    padding-top: 12rem;
+}
+
+.wrapper { 
+    max-width: 1270px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 2rem;
+    z-index: 100;
+    transition: 0.5s linear;
+    padding-bottom: 2rem;
+}
+
+.header_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.header_logo {
+    transition: 0.5s;
+}
+
+.header_logo:hover, .header_logo:focus {
+    transform: scale(1.2);
+}
+
+
+.header_nav a {
+    font-size: 2.5rem;
+    color: #FFFFFF;
+    text-decoration: none;
+    margin-left: 4rem;
+}
+
+
+.header_nav a:hover, .header_nav a:focus, .header_nav a:active {
+    opacity: 75%;
+}
+
+header input {
+    display: none;
+}
+
+header label {
+    font-size: 3rem;
+    color: #FFFFFF;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.header_active {
+    background-color: #2E587C;
+}
+
+/* Intro Styles */
+
+
+
+
+.intro_wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    max-width: 1270px;
+    margin: 0 auto;
+}
+
+
+
+.intro_title {
+    font-size: 10rem;
+    font-weight: bold;
+}
+
+.intro_subtitle {
+    font-size: 3rem;
+    line-height: auto;
+    margin-top: 10%;
+    margin-bottom: 30%;
+}
+
+.intro_buy {
+    background-color: #37ABFF;
+    border: 0;
+    width: 30rem;
+    height: 7rem;
+    border-radius: 20rem;
+    font-size: 3rem;
+    color: #000000;
+    font-weight: bold;
+    padding: 1rem 1rem;
+    transition: 0.5s;
+}
+
+.intro_buy:hover, .intro_buy:focus, .intro_buy:active {
+    background-color: #2C97E4;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+
+.intro_picture {
+    z-index: 1;
+    width: 35vw;
+    height: auto;
+    animation: animateBg 3s linear infinite;
+}
+
+.intro_img {
+    z-index: 1;
+}
+
+@keyframes animateBg {
+    0%, 100% {
+        transform: translateY(0);
+    } 
+    50% {
+        transform: translateY(-2.5rem);
+    }
+}
+
+
+/* Exoskeletons Start */
+
+.exos {
+    background-color: white;
+}
+
+.exos_title {
+    font-weight: bold;
+    font-size: 10rem;
+    color: #000000;
+    margin-bottom: 10rem;
+}
+
+.gallery {
+    position: relative;
+}
+
+.gallery__link {
+    display: block;
+    overflow: hidden;
+}
+
+.gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery__navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+.gallery-pagination {
+    /* width: inherit; */
+    display: flex;
+    justify-content: center;
+}
+
+.gallery__btn {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    margin-top: -12.5px;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    transition: background-color .3s;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.gallery__btn:hover {
+    transform: scale(1.2);
+}
+
+.gallery__btn-prev {
+    left: -30px;
+}
+
+.gallery__btn-next {
+    right: -30px;
+}
+
+.swiper-button-disabled {
+    cursor: default;
+}
+
+.swiper-pagination-total {
+    opacity: .6;
+}
+
+
+/* Projects */
+
+.projects_wrapper {
+    max-width: 1270px;
+    margin: 0 auto;
+}
+
+.projects_title {
+    font-weight: bold;
+    font-size: 10rem;
+    color: #FFFFFF;
+    margin-bottom: 5rem;
+}
+
+.projects_pictures {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.projects_img {
+    position: relative;
+    width: 50rem;
+    transition: 0.2s;
+    margin-bottom: 10rem;
+}
+
+
+.projects_img:hover, .projects_img:focus, .projects_img:active {
+    animation: animateProjects 0.8s linear infinite;
+    cursor: pointer;
+}
+
+.video {
+    background-color: #FFFFFF;
+    height: 100rem;
+}
+
+.video_wrapper {
+    max-width: 1270px;
+    margin: 0 auto;
+    height: 70%;
+}
+
+.video_title {
+    font-weight: bold;
+    font-size: 10rem;
+    color: #000000;
+    margin-bottom: 10rem;
+}
+
+
+@keyframes animateProjects {
+    0%, 100% {
+        transform: translateY(0);
+    } 
+    50% {
+        transform: translateY(-2.5rem);
+    }
+}
+
+/* Team */
+
+.team{
+    background-image: url("../img/png/team.png"); 
+    background-size: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.team_wrapper {
+    max-width: 90%;
+    margin: 0 auto;
+    max-height: max-content;
+}
+
+.team_members {
+    display: flex;
+    justify-content: space-between; /* Выравнивание элементов по центру */
+    flex-direction: row;
+    align-items: center;
+    margin-top: 30%;/* Если вы хотите, чтобы элементы переносились на новую строку при нехватке места */
+}
+
+.card1, .card2, .card3, .card4, .card5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    background-color: #396D95;
+    border-radius: 4rem; 
+    text-align: center; 
+    width: 22rem;
+    height: 8rem;
+    transition: 1s;
+}
+
+.name {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+.desc {
+    font-size: 1.5rem;
+    font-weight: lighter;
+} 
+
+.card1:hover, .card1:active, .card1:focus {
+    cursor: pointer;
+    transform:translateY(-5rem) translateX(3rem);
+}
+.card2:hover, .card2:active, .card2:focus {
+    cursor: pointer;
+    transform:translateY(-5rem) translateX(1.5rem);
+}
+.card3:hover, .card3:active, .card3:focus {
+    cursor: pointer;
+    transform:translateY(-5rem) translateX(0.5rem);
+}
+.card4:hover, .card4:active, .card4:focus {
+    cursor: pointer;
+    transform:translateY(-5rem) translateX(-2rem);
+}
+.card5:hover, .card5:active, .card5:focus {
+    cursor: pointer;
+    transform:translateY(-5rem) translateX(-2.5rem);
+}
+
+/* Bottom */
+
+.bottom {
+    max-height: max-content;
+    margin-top: -25rem;
+}
+
+.bottom_wrapper {
+    max-width: 1270px;
+    margin: 0 auto;
+}
+
+.bottom_title {
+    font-weight: bold;
+    font-size: 10rem;
+    color: #FFFFFF;
+    margin-bottom: 20rem;
+}
+
+.phone_number {
+    font-weight: bold;
+    font-size: 5rem;
+    color: #FFFFFF;
+    margin-bottom: 4rem;
+}
+
+.mail {
+    font-weight: bold;
+    font-size: 5rem;
+    color: #FFFFFF;
+    opacity: 0.7;
+    margin-bottom: 4rem;
+    transition: 1s;
+}
+
+.address {
+    font-weight: bold;
+    font-size: 5rem;
+    color: #FFFFFF;
+    opacity: 0.7;
+    margin-bottom: 4rem;
+    transition: 1s;
+}
+
+.medias {
+    display: flex;
+    justify-content: left; /* Выравнивание элементов по центру */
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10rem;
+}
+
+.medias a {
+    margin-right: 1rem;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(124deg) brightness(109%) contrast(101%);
+    opacity: 0.5;
+    transition: 1s;
+}
+
+.medias a:hover, .medias a:active, .medias a:focus {
+    cursor: pointer;
+    opacity: 1;
+    scale: 1.05;
+}
+
+.mail:hover, .mail:active, .mail:focus, .address:hover, .address:active, .address:focus {
+    opacity: 1;
+}
+
+
+/* Media */
+
+@media (max-width:1500px) {
+    .card1, .card2, .card3, .card4, .card5 {
+        width: 20rem;
+        height: 8rem;
+    }
+    
+    .name {
+        font-size: 1.8rem;
+        margin-top: 2rem;
+    }
+    
+    .desc {
+        font-size: 1.5rem;
+    } 
+    .intro_title, .exos_title, .video_title, .bottom_title, .projects_title {
+        font-size: 8rem;
+    }
+    
+}
+
+@media (max-width: 1250px) {
+    .intro_title {
+        font-size: 8rem;
+    }
+    .intro_subtitle {
+        font-size: 2rem;
+    }
+    .intro_buy {
+        width: 25rem;
+        height: 6rem;
+        font-size: 2rem;
+    }
+    .card1, .card2, .card3, .card4, .card5 {
+        width: 16rem;
+        height: 6rem;
+    }
+
+    .intro_title, .exos_title, .video_title, .bottom_title, .projects_title {
+        font-size: 7rem;
+    }
+    
+    .name {
+        font-size: 1.5rem;
+        margin-top: 1.5rem;
+    }
+    
+    .desc {
+        font-size: 1rem;
+    } 
+    .team_members {
+        margin-top: 20%;
+    }
+    .card1:hover, .card1:active, .card1:focus {
+        cursor: pointer;
+        transform:translateY(-3rem) translateX(2rem);
+    }
+    .card2:hover, .card2:active, .card2:focus {
+        cursor: pointer;
+        transform:translateY(-3rem) translateX(1.5rem);
+    }
+    .card3:hover, .card3:active, .card3:focus {
+        cursor: pointer;
+        transform:translateY(-3rem) translateX(0.5rem);
+    }
+    .card4:hover, .card4:active, .card4:focus {
+        cursor: pointer;
+        transform:translateY(-3rem) translateX(-1rem);
+    }
+    .card5:hover, .card5:active, .card5:focus {
+        cursor: pointer;
+        transform:translateY(-3rem) translateX(-1.5rem);
+    }
+    .bottom {
+        margin-top: -40rem;
+    }
+}
+
+@media (max-width: 950px) {
+    .header label {
+        visibility: visible;
+        opacity: 1;
+        margin-right: 3rem;
+    }
+
+    .intro_title, .exos_title, .video_title, .bottom_title, .projects_title {
+        font-size: 6rem;
+        text-align: center;
+    }
+
+    .header_logo {
+        margin: 1rem 3rem;
+    }
+    .header_nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 1rem 3rem;
+        border-top: 0.1rem solid rgba(0,0,0,0.1);
+        width: 100%;
+        transform-origin: top;
+        background-color: #FFFFFF;
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    .header_nav a {
+        display: block;
+        margin: 2rem 0;
+        font-size: 2rem;
+        color: #2C97E4;
+    }
+
+    .header input:checked ~ .header_nav {
+        transform: scale(1);
+        opacity: 1;
+        z-index: 1000;
+    } 
+
+    .intro_wrapper {
+        flex-direction: column;
+        padding-top: 3rem;
+    }
+
+    .intro_picture {
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        order: -1;
+        
+    }
+
+    .intro_content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .intro_title {
+        font-size: 7rem;
+        text-align: center;
+    }
+
+    .intro_subtitle {
+        font-size: 3rem;
+        margin-bottom: 4rem;
+        margin-top: 3rem;
+    }
+
+    .intro_buy {
+        width: 30rem;
+        height: 7rem;
+        font-size: 3rem;
+        margin-bottom: 10%;
+    }
+
+    .intro_title br{
+        display: none;
+    }
+
+    html {
+        font-size: 60%;
+    }
+
+    .projects_pictures {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10rem;
+    }
+
+    .video {
+        height:30rem;
+    }
+
+    .video_wrapper {
+        height: 40%;
+    }
+    .card1, .card2, .card3, .card4, .card5 {
+        width: 12rem;
+        height: 4rem;
+    }
+    
+    .name {
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+    
+    .desc {
+        font-size: 0.7rem;
+    } 
+    .team_members {
+        margin-top: 18%;
+    }
+    .card1:hover, .card1:active, .card1:focus {
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+    .card2:hover, .card2:active, .card2:focus {
+        cursor: pointer;
+        transform:scale(1.1);
+    }
+    .card3:hover, .card3:active, .card3:focus {
+        cursor: pointer;
+        transform:scale(1.1);
+    }
+    .card4:hover, .card4:active, .card4:focus {
+        cursor: pointer;
+        transform:scale(1.1);
+    }
+    .card5:hover, .card5:active, .card5:focus {
+        cursor: pointer;
+        transform:scale(1.1);
+    }
+
+    .bottom {
+        margin-top: -60rem;
+    }
+}
+
+@media (max-width: 580px) {
+    html {
+        font-size: 50%;
+    }
+    .card1, .card2, .card3, .card4, .card5 {
+        width: 9rem;
+        height: 4rem;
+    }
+    
+    .intro_title, .exos_title, .video_title, .bottom_title, .projects_title {
+        font-size: 5rem;
+    }
+
+    .name {
+        font-size: 0.8rem;
+        margin-top: 1rem;
+    }
+    
+    .desc {
+        font-size: 0.6rem;
+    } 
+    .team_members {
+        margin-top: 12%;
+    }
+} 
