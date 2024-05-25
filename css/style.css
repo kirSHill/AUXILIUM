@@ -581,6 +581,9 @@ header label {
     .bottom {
         margin-top: -40rem;
     }
+    .phone_number, .mail, .address {
+    	font-size: 4rem;
+    }
 }
 
 @media (max-width: 950px) {
@@ -723,10 +726,10 @@ header label {
 
     .bottom {
         margin-top: -60rem;
-
+    }
+	
     .phone_number, .mail, .address {
     	font-size: 3rem;
-    }
     }
 }
 
