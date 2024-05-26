@@ -581,6 +581,7 @@ header label {
     .bottom {
         margin-top: -40rem;
     }
+
     .phone_number, .mail, .address {
     	font-size: 4rem;
     }
@@ -688,12 +689,12 @@ header label {
         height: 40%;
     }
     .card1, .card2, .card3, .card4, .card5 {
-        width: 12rem;
+        max-width: 7rem;
         height: 4rem;
     }
     
     .name {
-        font-size: 1rem;
+        font-size: 0.8rem;
         margin-top: 1rem;
     }
     
@@ -725,9 +726,9 @@ header label {
     }
 
     .bottom {
-        margin-top: -60rem;
+        margin-top: -50rem;
     }
-	
+
     .phone_number, .mail, .address {
     	font-size: 3rem;
     }
@@ -747,7 +748,7 @@ header label {
     }
 
     .name {
-        font-size: 0.8rem;
+        font-size: 0.6rem;
         margin-top: 1rem;
     }
     
