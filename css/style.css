@@ -49,19 +49,19 @@ table {
 
 
 @font-face {
-    font-family: 'Helvetica';
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: bold;
-    src: local('Helvetica Bold'), 
-    url('../font/Helvetica-Bold.ttf') format('ttf');
+    src: local('Montserrat Bold'), 
+    url('../font/Montserrat-Bold.ttf') format('ttf');
 }
 
 @font-face {
-    font-family: 'Helvetica';
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    src: local('Helvetica Regular'), 
-    url('../font/Helvetica.ttf') format('ttf');
+    src: local('Montserrat Regular'), 
+    url('../font/Montserrat.ttf') format('ttf');
 }
 
 html {
@@ -73,7 +73,7 @@ html {
 }   
 
 body {
-    font-family: 'Helvetica';
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -388,7 +388,7 @@ header label {
 }
 
 .team_wrapper {
-    max-width: 90%;
+    max-width: 100%;
     margin: 0 auto;
     max-height: max-content;
 }
@@ -421,7 +421,7 @@ header label {
 }
 
 .desc {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: lighter;
 } 
 
@@ -520,7 +520,7 @@ header label {
 
 @media (max-width:1500px) {
     .card1, .card2, .card3, .card4, .card5 {
-        width: 20rem;
+        width: 22rem;
         height: 8rem;
     }
     
